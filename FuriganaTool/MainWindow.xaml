@@ -28,21 +28,25 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Grid.Column="0"
-                       Text="Kanji"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center" />
+                           Text="Kanji"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
 
                 <TextBlock Grid.Column="1"
-                       Text="Furigana"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center" />
+                           Text="Furigana"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
             </Grid>
 
             <ScrollViewer Grid.Row="1"
                           Background="White"
                           VerticalAlignment="Stretch">
 
-                <Grid x:Name="TextBoxGrid" Height="Auto" Margin="10,5,5,5" VerticalAlignment="Top">
+                <Grid x:Name="TextBoxGrid"
+                      Height="Auto"
+                      Margin="10,5,5,5"
+                      VerticalAlignment="Top">
+
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -55,61 +59,61 @@
                     </Grid.RowDefinitions>
 
                     <TextBox x:Name="TextBoxR0C0"
-                         Grid.Row="0"
-                         Grid.Column="0"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="0"
+                             Grid.Column="0"
+                             Height="30"
+                             Margin="5,5,5,5" />
 
                     <TextBox x:Name="TextBoxR0C1"
-                         Grid.Row="0"
-                         Grid.Column="1"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Height="30"
+                             Margin="5,5,5,5" />
 
                     <TextBox x:Name="TextBoxR1C0"
-                         Grid.Row="1"
-                         Grid.Column="0"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="1"
+                             Grid.Column="0"
+                             Height="30"
+                             Margin="5,5,5,5" />
 
                     <TextBox x:Name="TextBoxR1C1"
-                         Grid.Row="1"
-                         Grid.Column="1"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             Height="30"
+                             Margin="5,5,5,5" />
 
                     <TextBox x:Name="TextBoxR2C0"
-                         Grid.Row="2"
-                         Grid.Column="0"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="2"
+                             Grid.Column="0"
+                             Height="30"
+                             Margin="5,5,5,5" />
 
                     <TextBox x:Name="TextBoxR2C1"
-                         Grid.Row="2"
-                         Grid.Column="1"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="2"
+                             Grid.Column="1"
+                             Height="30"
+                             Margin="5,5,5,5" />
 
                     <TextBox x:Name="TextBoxR3C0"
-                         Grid.Row="3"
-                         Grid.Column="0"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="3"
+                             Grid.Column="0"
+                             Height="30"
+                             Margin="5,5,5,5" />
 
                     <TextBox x:Name="TextBoxR3C1"
-                         Grid.Row="3"
-                         Grid.Column="1"
-                         Height="30"
-                         Margin="5,5,5,5" />
+                             Grid.Row="3"
+                            Grid.Column="1"
+                             Height="30"
+                             Margin="5,5,5,5" />
                 </Grid>
             </ScrollViewer>
 
             <Grid x:Name="ControlsGrid"
-              Grid.Row="2"
-              Margin="10,10,15,10"
-              Height="120"
-              MinHeight="120"
-              Background="BlanchedAlmond">
+                  Grid.Row="2"
+                  Margin="10,10,15,10"
+                  Height="120"
+                  MinHeight="120"
+                  Background="BlanchedAlmond">
 
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -122,27 +126,27 @@
                 </Grid.ColumnDefinitions>
 
                 <Button x:Name="RunButton"
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Height="30"
-                    Margin="10,10,10,5"
-                    Content="RUN" Click="RunButton_Click" />
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Height="30"
+                        Margin="10,10,10,5"
+                        Content="RUN" Click="RunButton_Click" />
 
                 <Button x:Name="ClearButton"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Height="30"
-                    Margin="10,10,10,5"
-                    Content="CLEAR" Click="ClearButton_Click" />
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Height="30"
+                        Margin="10,10,10,5"
+                        Content="CLEAR" Click="ClearButton_Click" />
 
                 <Button x:Name="AddRowButton"
-                    Grid.Row="0"
-                    Grid.Column="2"
-                    Height="30"
-                    Margin="10,10,10,5"
-                    Content="ADD" Click="AddRowButton_Click" />
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Height="30"
+                        Margin="10,10,10,5"
+                        Content="ADD" Click="AddRowButton_Click" />
 
-                <TextBox x:Name="ResultTextBox" 
+                <TextBox x:Name="ResultTextBox"
                          Grid.Row="1"
                          Grid.Column="0"
                          Grid.ColumnSpan="2"
@@ -150,11 +154,11 @@
                          Margin="10,5,10,10" />
 
                 <Button x:Name="CopyButton"
-                    Grid.Row="1"
-                    Grid.Column="3"
-                    Height="30"
-                    Margin="10,5,10,10"
-                    Content="Copy" Click="CopyButton_Click" />
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Height="30"
+                        Margin="10,5,10,10"
+                        Content="Copy" Click="CopyButton_Click" />
             </Grid>
         </Grid>
     </Grid>

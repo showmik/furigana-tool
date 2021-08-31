@@ -1,9 +1,10 @@
 ﻿using Gem;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Media;
 
 namespace FuriganaTool
 {
@@ -21,24 +22,24 @@ namespace FuriganaTool
             InitializeComponent();
             InitializeKanjiTextBoxList();
             InitializeFuriganaTextBoxList();
-            rowCounter = kanjiTextBoxList.Count;
+            rowCounter = TextBoxGrid.RowDefinitions.Count;
         }
 
         private void RunButton_Click(object sender, RoutedEventArgs e)
         {
-            string resultString = string.Empty;
+            StringBuilder stringBuilder = new StringBuilder();
 
             for (int i = 0; i < rowCounter; i++)
             {
                 if (kanjiTextBoxList[i].Text != string.Empty && furiganaTextBoxList[i].Text != string.Empty)
                 {
-                    resultString += furiganaTextBoxList[i].Text.Trim() + "[" + kanjiTextBoxList[i].Text.Trim() + "]";
+                    stringBuilder.Append($"{kanjiTextBoxList[i].Text.Trim()}[{furiganaTextBoxList[i].Text.Trim()}]");
                 }
             }
 
-            if (resultString != string.Empty)
+            if (stringBuilder.ToString() != string.Empty)
             {
-                var furigana = new Furigana(resultString);
+                var furigana = new Furigana(stringBuilder.ToString());
                 ResultTextBox.Text = furigana.ResultRubySyntax;
             }
             else
@@ -88,18 +89,18 @@ namespace FuriganaTool
 
         private void InitializeKanjiTextBoxList()
         {
-            kanjiTextBoxList.Add(TextBoxR0C1);
-            kanjiTextBoxList.Add(TextBoxR1C1);
-            kanjiTextBoxList.Add(TextBoxR2C1);
-            kanjiTextBoxList.Add(TextBoxR3C1);
+            kanjiTextBoxList.Add(TextBoxR0C0);
+            kanjiTextBoxList.Add(TextBoxR1C0);
+            kanjiTextBoxList.Add(TextBoxR2C0);
+            kanjiTextBoxList.Add(TextBoxR3C0);
         }
 
         private void InitializeFuriganaTextBoxList()
         {
-            furiganaTextBoxList.Add(TextBoxR0C0);
-            furiganaTextBoxList.Add(TextBoxR1C0);
-            furiganaTextBoxList.Add(TextBoxR2C0);
-            furiganaTextBoxList.Add(TextBoxR3C0);
+            furiganaTextBoxList.Add(TextBoxR0C1);
+            furiganaTextBoxList.Add(TextBoxR1C1);
+            furiganaTextBoxList.Add(TextBoxR2C1);
+            furiganaTextBoxList.Add(TextBoxR3C1);
         }
     }
 }

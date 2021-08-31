@@ -1,17 +1,9 @@
-﻿using System;
+﻿using Gem;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Media;
 
 namespace FuriganaTool
 {
@@ -34,12 +26,35 @@ namespace FuriganaTool
 
         private void RunButton_Click(object sender, RoutedEventArgs e)
         {
+            string resultString = string.Empty;
 
+            for (int i = 0; i < rowCounter; i++)
+            {
+                if (kanjiTextBoxList[i].Text != string.Empty && furiganaTextBoxList[i].Text != string.Empty)
+                {
+                    resultString += furiganaTextBoxList[i].Text.Trim() + "[" + kanjiTextBoxList[i].Text.Trim() + "]";
+                }
+            }
+
+            if (resultString != string.Empty)
+            {
+                var furigana = new Furigana(resultString);
+                ResultTextBox.Text = furigana.ResultRubySyntax;
+            }
+            else
+            {
+                ResultTextBox.Text = "Input both Kanji and Furigana!";
+                SystemSounds.Exclamation.Play();
+            }
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-
+            for (int i = 0; i < rowCounter; i++)
+            {
+                kanjiTextBoxList[i].Clear();
+                furiganaTextBoxList[i].Clear();
+            }
         }
 
         private void AddRowButton_Click(object sender, RoutedEventArgs e)
@@ -63,12 +78,12 @@ namespace FuriganaTool
             TextBoxGrid.RowDefinitions.Add(new RowDefinition());
             TextBoxGrid.Children.Add(kanjiTextBoxList.Last());
             TextBoxGrid.Children.Add(furiganaTextBoxList.Last());
-            
         }
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ResultTextBox.SelectAll();
+            ResultTextBox.Copy();
         }
 
         private void InitializeKanjiTextBoxList()
@@ -85,7 +100,6 @@ namespace FuriganaTool
             furiganaTextBoxList.Add(TextBoxR1C0);
             furiganaTextBoxList.Add(TextBoxR2C0);
             furiganaTextBoxList.Add(TextBoxR3C0);
-          
         }
     }
 }

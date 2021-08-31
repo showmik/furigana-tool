@@ -1,0 +1,1 @@
+﻿xmlns:local="clr-namespace:FuriganaTool"

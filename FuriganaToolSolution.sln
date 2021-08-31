@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuriganaTool", "FuriganaTool\FuriganaTool.csproj", "{A1B77CA2-E718-4AA5-AFA0-63BD8C423670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1B77CA2-E718-4AA5-AFA0-63BD8C423670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B77CA2-E718-4AA5-AFA0-63BD8C423670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B77CA2-E718-4AA5-AFA0-63BD8C423670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B77CA2-E718-4AA5-AFA0-63BD8C423670}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFD7AE16-0EAF-40B4-8146-8D3488E97A55}
+	EndGlobalSection
+EndGlobal

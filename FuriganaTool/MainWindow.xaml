@@ -16,9 +16,9 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="30" />
                 <RowDefinition />
-                <RowDefinition Height="130"/>
+                <RowDefinition Height="130" />
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" Height="30">
@@ -38,8 +38,12 @@
                        VerticalAlignment="Center" />
             </Grid>
 
-            <ScrollViewer Grid.Row="1" Background="White" VerticalAlignment="Stretch">
-                <Grid x:Name="TextBoxGrid" Margin="10,5,5,5">
+            <ScrollViewer Grid.Row="1"
+                          Background="White"
+                          Height="auto"
+                          VerticalAlignment="Stretch">
+
+                <Grid x:Name="TextBoxGrid" Height="Auto" Margin="10,5,5,5" VerticalAlignment="Top">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />

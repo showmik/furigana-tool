@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="370"
+        Height="Auto"
         MinHeight="370"
         Width="420"
         MinWidth="420"
@@ -43,14 +43,54 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBox Grid.Row="0" Grid.Column="0" Height="30" Margin="5,5,5,5" />
-                <TextBox Grid.Row="0" Grid.Column="1" Height="30" Margin="5,5,5,5" />
-                <TextBox Grid.Row="1" Grid.Column="0" Height="30" Margin="5,5,5,5" />
-                <TextBox Grid.Row="1" Grid.Column="1" Height="30" Margin="5,5,5,5" />
-                <TextBox Grid.Row="2" Grid.Column="0" Height="30" Margin="5,5,5,5" />
-                <TextBox Grid.Row="2" Grid.Column="1" Height="30" Margin="5,5,5,5" />
-                <TextBox Grid.Row="3" Grid.Column="0" Height="30" Margin="5,5,5,5" />
-                <TextBox Grid.Row="3" Grid.Column="1" Height="30" Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR0C0"
+                         Grid.Row="0"
+                         Grid.Column="0"
+                         Height="30"
+                         Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR0C1"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR1C0"
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         Height="30"
+                         Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR1C1"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR2C0"
+                         Grid.Row="2"
+                         Grid.Column="0"
+                         Height="30"
+                         Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR2C1"
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR3C0"
+                         Grid.Row="3"
+                         Grid.Column="0"
+                         Height="30"
+                         Margin="5,5,5,5" />
+
+                <TextBox x:Name="TextBoxR3C1"
+                         Grid.Row="3"
+                         Grid.Column="1"
+                         Height="30"
+                         Margin="5,5,5,5" />
             </Grid>
         </ScrollViewer>
 
@@ -76,21 +116,21 @@
                     Grid.Column="0"
                     Height="30"
                     Margin="10,10,10,5"
-                    Content="RUN" />
+                    Content="RUN" Click="RunButton_Click" />
 
             <Button x:Name="ClearButton"
                     Grid.Row="0"
                     Grid.Column="1"
                     Height="30"
                     Margin="10,10,10,5"
-                    Content="CLEAR" />
+                    Content="CLEAR" Click="ClearButton_Click" />
 
             <Button x:Name="AddRowButton"
                     Grid.Row="0"
                     Grid.Column="2"
                     Height="30"
                     Margin="10,10,10,5"
-                    Content="ADD" />
+                    Content="ADD" Click="AddRowButton_Click" />
 
             <TextBox Grid.Row="1"
                      Grid.Column="0"
@@ -103,7 +143,7 @@
                     Grid.Column="3"
                     Height="30"
                     Margin="10,5,10,10"
-                    Content="Copy" />
+                    Content="Copy" Click="CopyButton_Click" />
         </Grid>
     </DockPanel>
 </Window>

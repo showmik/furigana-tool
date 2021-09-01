@@ -11,25 +11,23 @@
         MinWidth="420"
         MaxWidth="420"
         ResizeMode="CanResize">
-    
-    
 
     <Window.Resources>
-        
-        
+
         <!-- =============================== TextBox Style ================================ -->
-        
+
         <Style TargetType="{x:Type TextBox}">
             <Setter Property="SnapsToDevicePixels" Value="True" />
             <Setter Property="OverridesDefaultStyle" Value="True" />
             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
             <Setter Property="AllowDrop" Value="true" />
-            <Setter Property="FontFamily" Value="Consolas"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontStyle" Value="Normal"/>
-            <Setter Property="VerticalContentAlignment"  Value="Center"/>
-            <Setter Property="HorizontalContentAlignment"  Value="Left"/>
-            <Setter Property="Foreground"  Value="#0C7FDE"/>
+            <Setter Property="FontFamily" Value="Consolas" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontStyle" Value="Normal" />
+            <Setter Property="VerticalContentAlignment"  Value="Center" />
+            <Setter Property="HorizontalContentAlignment"  Value="Left" />
+            <Setter Property="Foreground"  Value="#0C7FDE" />
+
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBoxBase}">
@@ -41,11 +39,9 @@
                                 BorderThickness="2">
 
                             <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
-                            
                         </Border>
 
                         <ControlTemplate.Triggers>
-                            
 
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="Border" Property="Background" Value="#ffffff" />
@@ -61,7 +57,6 @@
                                 <Setter Property="SelectionBrush" Value="#FFFFFF" />
                                 <Setter Property="SelectionOpacity" Value="0.4" />
                             </Trigger>
-
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -99,6 +94,7 @@
                                 <Setter TargetName="border" Property="BorderBrush" Value="#085594" />
                                 <Setter TargetName="border" Property="Background" Value="#FFFFFF" />
                                 <Setter Property="Foreground" Value="#085594" />
+
                                 <Setter TargetName="border" Property="Cursor" Value="Hand" />
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -106,7 +102,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
     </Window.Resources>
 
     <!-- =============================== Main Grid Contents ================================ -->
@@ -126,7 +121,7 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="KANJI" 
+                <TextBlock Text="KANJI"
                            Grid.Column="0"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
@@ -153,7 +148,7 @@
                       VerticalAlignment="Top">
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="18"/>
+                        <ColumnDefinition Width="18" />
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
@@ -164,7 +159,7 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="1" 
+                    <TextBlock Text="1"
                                Grid.Row="0"
                                Grid.Column="0"
                                FontFamily="Consolas"
@@ -172,9 +167,9 @@
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
-                               Margin="0,0,0,0"/>
+                               Margin="0,0,0,0" />
 
-                    <TextBlock Text="2" 
+                    <TextBlock Text="2"
                                Grid.Row="1"
                                Grid.Column="0"
                                FontFamily="Consolas"
@@ -182,9 +177,9 @@
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
-                               Margin="0,0,0,0"/>
+                               Margin="0,0,0,0" />
 
-                    <TextBlock Text="3" 
+                    <TextBlock Text="3"
                                Grid.Row="2"
                                Grid.Column="0"
                                FontFamily="Consolas"
@@ -192,9 +187,9 @@
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
-                               Margin="0,0,0,0"/>
+                               Margin="0,0,0,0" />
 
-                    <TextBlock Text="4" 
+                    <TextBlock Text="4"
                                Grid.Row="3"
                                Grid.Column="0"
                                FontFamily="Consolas"
@@ -202,8 +197,7 @@
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
-                               Margin="0,0,0,0"/>
-
+                               Margin="0,0,0,0" />
 
                     <TextBox x:Name="TextBoxR0C1"
                              Grid.Row="0"
@@ -331,18 +325,17 @@
                             <Setter Property="OverridesDefaultStyle" Value="True" />
                             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
                             <Setter Property="AllowDrop" Value="true" />
-                            <Setter Property="BorderThickness" Value="2"/>
-                            <Setter Property="BorderBrush" Value="#FFFFFF"/>
+                            <Setter Property="BorderThickness" Value="2" />
+                            <Setter Property="BorderBrush" Value="#FFFFFF" />
                             <Setter Property="Background" Value="#42a5f5" />
                             <Setter Property="Foreground" Value="#FFFFFF" />
                             <Setter Property="FontFamily" Value="Consolas" />
                             <Setter Property="FontSize" Value="13" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="HorizontalContentAlignment" Value="Left" />
-                            <Setter Property="TextWrapping" Value="NoWrap"/>
+                            <Setter Property="TextWrapping" Value="NoWrap" />
 
                             <Style.Triggers>
-
 
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="#FFFFFF" />
@@ -357,15 +350,9 @@
                                     <Setter Property="CaretBrush" Value="#085594" />
                                     <Setter Property="SelectionBrush" Value="#42a5f5" />
                                     <Setter Property="SelectionOpacity" Value="0.4" />
-
-
                                 </Trigger>
-                                
-
-
                             </Style.Triggers>
                         </Style>
-
                     </TextBox.Style>
 
                     <TextBox.Template>
@@ -374,14 +361,10 @@
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     BorderBrush="{TemplateBinding BorderBrush}">
 
-
-                                <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
                             </Border>
-                            
-                            
                         </ControlTemplate>
                     </TextBox.Template>
-
                 </TextBox>
 
                 <Button x:Name="CopyButton"

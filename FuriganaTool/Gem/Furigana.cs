@@ -8,7 +8,7 @@ namespace Gem
     public class Furigana
     {
         private string ReadingHtml => Concat(x => x.ReadingHtml);
-        public string ResultRubySyntax => $"<ruby>{ReadingHtml}</ruby>";
+        public string RubySyntaxResult => $"<ruby>{ReadingHtml}</ruby>";
 
         private readonly IEnumerable<ISegment> _segments;
 

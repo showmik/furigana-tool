@@ -46,7 +46,7 @@ namespace FuriganaTool
             if (stringBuilder.ToString() != string.Empty)
             {
                 var furigana = new Furigana(stringBuilder.ToString());
-                ResultTextBox.Text = furigana.ResultRubySyntax;
+                ResultTextBox.Text = furigana.RubySyntaxResult;
             }
             else
             {
@@ -58,9 +58,7 @@ namespace FuriganaTool
                         SystemSounds.Exclamation.Play();
                     }
                 }
-                catch
-                {
-                }
+                catch { }
             }
         }
 
@@ -95,9 +93,7 @@ namespace FuriganaTool
                         SystemSounds.Exclamation.Play();
                     }
                 }
-                catch
-                {
-                }
+                catch { }
             }
         }
 

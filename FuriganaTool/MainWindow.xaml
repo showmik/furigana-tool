@@ -50,6 +50,13 @@
                                 <Setter TargetName="Border" Property="BorderBrush" Value="#085594" />
                                 <Setter Property="Foreground" Value="#FFFFFF" />
                             </Trigger>
+
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#42a5f5" />
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#085594" />
+                                <Setter Property="Foreground" Value="#FFFFFF" />
+                            </Trigger>
+
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -139,6 +146,7 @@
                       VerticalAlignment="Top">
 
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
@@ -149,24 +157,52 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <TextBox x:Name="TextBoxR0C0"
-                             Grid.Row="0"
-                             Grid.Column="0"
-                             Height="30"
-                             Margin="5,5,5,5" />
+                    <TextBlock Text="1" 
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               FontFamily="Proxima Nova Rg"
+                               FontSize="18"
+                               Foreground="#FF2196F3"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="2" 
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               FontFamily="Proxima Nova Rg"
+                               FontSize="18"
+                               Foreground="#FF2196F3"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="3" 
+                               Grid.Row="2"
+                               Grid.Column="0"
+                               FontFamily="Proxima Nova Rg"
+                               FontSize="18"
+                               Foreground="#FF2196F3"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="4" 
+                               Grid.Row="3"
+                               Grid.Column="0"
+                               FontFamily="Proxima Nova Rg"
+                               FontSize="18"
+                               Foreground="#FF2196F3"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+
 
                     <TextBox x:Name="TextBoxR0C1"
                              Grid.Row="0"
                              Grid.Column="1"
                              Height="30"
-                             Margin="5,5,5,5"
-                             BorderThickness="2"
-                             BorderBrush="#FF2196F3"
-                             Background="White" />
+                             Margin="5,5,5,5" />
 
-                    <TextBox x:Name="TextBoxR1C0"
-                             Grid.Row="1"
-                             Grid.Column="0"
+                    <TextBox x:Name="TextBoxR0C2"
+                             Grid.Row="0"
+                             Grid.Column="2"
                              Height="30"
                              Margin="5,5,5,5"
                              BorderThickness="2"
@@ -182,9 +218,9 @@
                              BorderBrush="#FF2196F3"
                              Background="White" />
 
-                    <TextBox x:Name="TextBoxR2C0"
-                             Grid.Row="2"
-                             Grid.Column="0"
+                    <TextBox x:Name="TextBoxR1C2"
+                             Grid.Row="1"
+                             Grid.Column="2"
                              Height="30"
                              Margin="5,5,5,5"
                              BorderThickness="2"
@@ -200,9 +236,9 @@
                              BorderBrush="#FF2196F3"
                              Background="White" />
 
-                    <TextBox x:Name="TextBoxR3C0"
-                             Grid.Row="3"
-                             Grid.Column="0"
+                    <TextBox x:Name="TextBoxR2C2"
+                             Grid.Row="2"
+                             Grid.Column="2"
                              Height="30"
                              Margin="5,5,5,5"
                              BorderThickness="2"
@@ -211,7 +247,16 @@
 
                     <TextBox x:Name="TextBoxR3C1"
                              Grid.Row="3"
-                            Grid.Column="1"
+                             Grid.Column="1"
+                             Height="30"
+                             Margin="5,5,5,5"
+                             BorderThickness="2"
+                             BorderBrush="#FF2196F3"
+                             Background="White" />
+
+                    <TextBox x:Name="TextBoxR3C2"
+                             Grid.Row="3"
+                            Grid.Column="2"
                              Height="30"
                              Margin="5,5,5,5"
                              BorderThickness="2"
@@ -288,6 +333,13 @@
                                     <Setter Property="BorderBrush"  Value="#085594" />
                                     <Setter Property="Foreground" Value="#085594" />
                                 </Trigger>
+
+                                <Trigger Property="IsFocused" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFF" />
+                                    <Setter Property="BorderBrush"  Value="#085594" />
+                                    <Setter Property="Foreground" Value="#085594" />
+                                </Trigger>
+
                             </Style.Triggers>
                         </Style>
 

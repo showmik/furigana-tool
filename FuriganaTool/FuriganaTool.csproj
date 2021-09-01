@@ -7,8 +7,24 @@
     <Authors>Showmik Haque</Authors>
     <Company>Darkspactus Soft</Company>
     <Product>Furigana Tool</Product>
+    <PackageIcon>furigana_tool_icon_512x512.png</PackageIcon>
+    <PackageIconUrl />
+    <ApplicationIcon>furigana_tool_icon.ico</ApplicationIcon>
 
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\furigana_tool_icon.ico" />
+    <None Remove="Assets\Images\furigana_tool_icon.ico" />
+    <None Include="Assets\Images\furigana_tool_icon_512x512.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Images\" />
+  </ItemGroup>
 
   
 </Project>

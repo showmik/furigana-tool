@@ -10,7 +10,7 @@
         Width="420"
         MinWidth="430"
         MaxWidth="430"
-        ResizeMode="CanResize">
+        ResizeMode="CanResize" >
 
     <Window.Resources>
         <!--#region Scrool Bar Style -->

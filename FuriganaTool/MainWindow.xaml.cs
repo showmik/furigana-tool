@@ -1,4 +1,5 @@
 ﻿using Gem;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
@@ -45,7 +46,10 @@ namespace FuriganaTool
             else
             {
                 ResultTextBox.Text = "Input both Kanji and Furigana!";
-                SystemSounds.Exclamation.Play();
+                if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+                {
+                    SystemSounds.Exclamation.Play();
+                }
             }
         }
 

@@ -9,8 +9,4 @@
     <Product>Furigana Tool</Product>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
-
 </Project>

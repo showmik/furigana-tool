@@ -1,1 +1,33 @@
 ﻿xmlns:local="clr-namespace:FuriganaTool"
+
+<==============================================================================================
+<Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Proxima Nova Rg" />
+                            <Setter Property="Background" Value="#ffffff" />
+                            <Setter Property="Foreground" Value="#085594" />
+                            <Setter Property="BorderBrush" Value="#085594" />
+                            <Setter Property="Cursor" Value="Hand" />
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#E7F4FE" />
+                                    <Setter Property="Foreground" Value="#085594" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="Auto" Height="Auto" CornerRadius="0"
+                            Background="{TemplateBinding Background}"
+                                    BorderThickness="2"
+                                    BorderBrush="#085594">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+<========================================================================================================

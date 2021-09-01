@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="370"
-        MinHeight="370"
+        Height="380"
+        MinHeight="380"
         Width="420"
         MinWidth="420"
         MaxWidth="420"
         ResizeMode="CanResize">
+    
+    
 
     <Window.Resources>
+        
         
         <!-- =============================== TextBox Style ================================ -->
         
@@ -22,10 +25,11 @@
             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
             <Setter Property="AllowDrop" Value="true" />
             <Setter Property="FontFamily" Value="Consolas"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontStyle" Value="Normal"/>
             <Setter Property="VerticalContentAlignment"  Value="Center"/>
             <Setter Property="HorizontalContentAlignment"  Value="Left"/>
+            <Setter Property="Foreground"  Value="#0C7FDE"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBoxBase}">
@@ -35,26 +39,27 @@
                                 Background="#FFFFFF"
                                 BorderBrush="#42a5f5"
                                 BorderThickness="2">
+
                             <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                            
                         </Border>
 
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled"  Value="False">
-                                <Setter TargetName="Border" Property="Background" Value="#FFFFFF" />
-                                <Setter TargetName="Border" Property="BorderBrush" Value="#42a5f5" />
-                                <Setter Property="Foreground" Value="#085594" />
-                            </Trigger>
+                            
 
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#42a5f5" />
+                                <Setter TargetName="Border" Property="Background" Value="#ffffff" />
                                 <Setter TargetName="Border" Property="BorderBrush" Value="#085594" />
-                                <Setter Property="Foreground" Value="#FFFFFF" />
+                                <Setter Property="Foreground" Value="#085594" />
                             </Trigger>
 
                             <Trigger Property="IsFocused" Value="True">
                                 <Setter TargetName="Border" Property="Background" Value="#42a5f5" />
                                 <Setter TargetName="Border" Property="BorderBrush" Value="#085594" />
                                 <Setter Property="Foreground" Value="#FFFFFF" />
+                                <Setter Property="CaretBrush" Value="#FFFFFF" />
+                                <Setter Property="SelectionBrush" Value="#FFFFFF" />
+                                <Setter Property="SelectionOpacity" Value="0.4" />
                             </Trigger>
 
                         </ControlTemplate.Triggers>
@@ -69,9 +74,10 @@
             <Setter Property="SnapsToDevicePixels" Value="True" />
             <Setter Property="OverridesDefaultStyle" Value="True" />
             <Setter Property="MinHeight" Value="30" />
-            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontWeight" Value="Regular" />
+            <Setter Property="FontSize" Value="14" />
             <Setter Property="FontFamily" Value="Proxima Nova Rg" />
-            <Setter Property="Foreground" Value="#085594" />
+            <Setter Property="Foreground" Value="#FFFFFF" />
 
             <Setter Property="Template">
                 <Setter.Value>
@@ -79,8 +85,8 @@
                         <Border x:Name="border"
                                 CornerRadius="0"
                                 Padding="2"
-                                Background="#FFFFFF"
-                                BorderBrush="#085594"
+                                Background="#42a5f5"
+                                BorderBrush="#FFFFFF"
                                 BorderThickness="2">
 
                             <ContentPresenter Content="{Binding Path=Content, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
@@ -91,7 +97,8 @@
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border" Property="BorderBrush" Value="#085594" />
-                                <Setter TargetName="border" Property="Background" Value="#E7F4FE" />
+                                <Setter TargetName="border" Property="Background" Value="#FFFFFF" />
+                                <Setter Property="Foreground" Value="#085594" />
                                 <Setter TargetName="border" Property="Cursor" Value="Hand" />
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -108,32 +115,32 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="30" />
+                <RowDefinition Height="40" />
                 <RowDefinition />
                 <RowDefinition Height="130" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Height="30" Margin="0,0,0,5">
+            <Grid Grid.Row="0" Height="30" Margin="0,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0"
-                           Text="Kanji"
+                <TextBlock Text="KANJI" 
+                           Grid.Column="0"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Foreground="White"
                            FontFamily="Proxima Nova Rg"
-                           FontSize="16" />
+                           FontSize="14" />
 
-                <TextBlock Grid.Column="1"
-                           Text="Furigana"
+                <TextBlock Text="FURIGANA"
+                           Grid.Column="1"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Foreground="White"
                            FontFamily="Proxima Nova Rg"
-                           FontSize="16" />
+                           FontSize="14" />
             </Grid>
 
             <ScrollViewer Grid.Row="1"
@@ -324,7 +331,7 @@
                             <Setter Property="OverridesDefaultStyle" Value="True" />
                             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
                             <Setter Property="AllowDrop" Value="true" />
-                            <Setter Property="BorderThickness" Value="3"/>
+                            <Setter Property="BorderThickness" Value="2"/>
                             <Setter Property="BorderBrush" Value="#FFFFFF"/>
                             <Setter Property="Background" Value="#42a5f5" />
                             <Setter Property="Foreground" Value="#FFFFFF" />
@@ -332,6 +339,7 @@
                             <Setter Property="FontSize" Value="13" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="HorizontalContentAlignment" Value="Left" />
+                            <Setter Property="TextWrapping" Value="NoWrap"/>
 
                             <Style.Triggers>
 
@@ -346,7 +354,14 @@
                                     <Setter Property="Background" Value="#FFFFFF" />
                                     <Setter Property="BorderBrush"  Value="#085594" />
                                     <Setter Property="Foreground" Value="#085594" />
+                                    <Setter Property="CaretBrush" Value="#085594" />
+                                    <Setter Property="SelectionBrush" Value="#42a5f5" />
+                                    <Setter Property="SelectionOpacity" Value="0.4" />
+
+
                                 </Trigger>
+                                
+
 
                             </Style.Triggers>
                         </Style>
@@ -358,9 +373,9 @@
                             <Border Background="{TemplateBinding Background }"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     BorderBrush="{TemplateBinding BorderBrush}">
-                                    
 
-                                <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+
+                                <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
                             </Border>
                             
                             

@@ -30,9 +30,10 @@ namespace FuriganaTool
 
         private void RunButton_Click(object sender, RoutedEventArgs e)
         {
+
             StringBuilder stringBuilder = new StringBuilder();
 
-            for (int i = 0; i < rowCounter; i++)
+            for (int i = 0; i < kanjiTextBoxList.Count; i++)
             {
                 if (kanjiTextBoxList[i].Text != string.Empty && furiganaTextBoxList[i].Text != string.Empty)
                 {

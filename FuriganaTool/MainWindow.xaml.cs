@@ -6,6 +6,7 @@ using System.Media;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace FuriganaTool
 {
@@ -16,7 +17,7 @@ namespace FuriganaTool
     {
         private List<TextBox> kanjiTextBoxList = new List<TextBox>();
         private List<TextBox> furiganaTextBoxList = new List<TextBox>();
-        private List<TextBlock> rowCounterTexBlockList = new List<TextBlock>();
+        private List<TextBlock> rowCounterTextList = new List<TextBlock>();
         private int rowCounter;
 
         public MainWindow()
@@ -66,24 +67,40 @@ namespace FuriganaTool
         private void AddRowButton_Click(object sender, RoutedEventArgs e)
         {
             rowCounter++;
-            TextBoxGrid.RowDefinitions.Add(new RowDefinition());
 
-            AddRowCounterTextBlock();
-            AddKanjiTextBox();
-            AddFutiganaTextBox();
+            if (rowCounter <= 20)
+            {
+                TextBoxGrid.RowDefinitions.Add(new RowDefinition());
+
+                AddRowCounterText();
+                AddKanjiTextBox();
+                AddFuriganaTextBox();
+            }
+            else
+            {
+                ResultTextBox.Text = "Maximum Input Reached!!!";
+            }
         }
 
-        private void AddRowCounterTextBlock()
+        private void AddRowCounterText()
         {
-            rowCounterTexBlockList.Add(new TextBlock());
-            Grid.SetRow(rowCounterTexBlockList.Last(), rowCounter - 1);
-            Grid.SetColumn(rowCounterTexBlockList.Last(), 0);
-            rowCounterTexBlockList.Last().Text = rowCounter.ToString();
+            rowCounterTextList.Add(new TextBlock());
+            TextBlock currentRowCounterText = rowCounterTextList.Last();
 
-            TextBoxGrid.Children.Add(rowCounterTexBlockList.Last());
+            Grid.SetRow(currentRowCounterText, rowCounter - 1);
+            Grid.SetColumn(currentRowCounterText, 0);
+            currentRowCounterText.Text = rowCounter.ToString();
+            currentRowCounterText.FontFamily = new FontFamily("Consolas");
+            currentRowCounterText.FontSize = 14;
+            currentRowCounterText.Foreground = new SolidColorBrush(Color.FromRgb(33, 150, 243));
+            currentRowCounterText.HorizontalAlignment = HorizontalAlignment.Center;
+            currentRowCounterText.VerticalAlignment = VerticalAlignment.Center;
+            //currentRowCounterText.Margin = new Thickness(0, 0, 5, 0);
+
+            TextBoxGrid.Children.Add(currentRowCounterText);
         }
 
-        private void AddFutiganaTextBox()
+        private void AddFuriganaTextBox()
         {
             furiganaTextBoxList.Add(new TextBox());
             Grid.SetRow(furiganaTextBoxList.Last(), rowCounter - 1);
@@ -126,5 +143,6 @@ namespace FuriganaTool
             furiganaTextBoxList.Add(TextBoxR2C2);
             furiganaTextBoxList.Add(TextBoxR3C2);
         }
+
     }
 }

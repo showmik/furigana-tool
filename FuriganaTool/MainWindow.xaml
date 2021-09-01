@@ -142,11 +142,11 @@
 
                 <Grid x:Name="TextBoxGrid"
                       Height="Auto"
-                      Margin="10,5,5,5"
+                      Margin="5,5,5,5"
                       VerticalAlignment="Top">
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="18"/>
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
@@ -160,38 +160,42 @@
                     <TextBlock Text="1" 
                                Grid.Row="0"
                                Grid.Column="0"
-                               FontFamily="Proxima Nova Rg"
-                               FontSize="18"
+                               FontFamily="Consolas"
+                               FontSize="14"
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
-                               HorizontalAlignment="Center"/>
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,0"/>
 
                     <TextBlock Text="2" 
                                Grid.Row="1"
                                Grid.Column="0"
-                               FontFamily="Proxima Nova Rg"
-                               FontSize="18"
+                               FontFamily="Consolas"
+                               FontSize="14"
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
-                               HorizontalAlignment="Center"/>
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,0"/>
 
                     <TextBlock Text="3" 
                                Grid.Row="2"
                                Grid.Column="0"
-                               FontFamily="Proxima Nova Rg"
-                               FontSize="18"
+                               FontFamily="Consolas"
+                               FontSize="14"
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
-                               HorizontalAlignment="Center"/>
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,0"/>
 
                     <TextBlock Text="4" 
                                Grid.Row="3"
                                Grid.Column="0"
-                               FontFamily="Proxima Nova Rg"
-                               FontSize="18"
+                               FontFamily="Consolas"
+                               FontSize="14"
                                Foreground="#FF2196F3"
                                VerticalAlignment="Center"
-                               HorizontalAlignment="Center"/>
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,0"/>
 
 
                     <TextBox x:Name="TextBoxR0C1"
@@ -267,7 +271,7 @@
 
             <Grid x:Name="ControlsGrid"
                   Grid.Row="2"
-                  Margin="10,10,15,10"
+                  Margin="18,10,15,10"
                   Height="120"
                   MinHeight="120"
                   Background="#42a5f5">
@@ -324,6 +328,10 @@
                             <Setter Property="BorderBrush" Value="#FFFFFF"/>
                             <Setter Property="Background" Value="#42a5f5" />
                             <Setter Property="Foreground" Value="#FFFFFF" />
+                            <Setter Property="FontFamily" Value="Consolas" />
+                            <Setter Property="FontSize" Value="13" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="HorizontalContentAlignment" Value="Left" />
 
                             <Style.Triggers>
 

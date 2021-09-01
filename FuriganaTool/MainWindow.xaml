@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="380"
-        MinHeight="380"
+        Height="385"
+        MinHeight="385"
         Width="420"
         MinWidth="420"
         MaxWidth="420"
@@ -112,10 +112,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="40" />
                 <RowDefinition />
-                <RowDefinition Height="130" />
+                <RowDefinition Height="135" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Height="30" Margin="0,0,0,0">
+            <Grid Grid.Row="0" Height="30" Margin="25,0,25,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
@@ -144,7 +144,7 @@
 
                 <Grid x:Name="TextBoxGrid"
                       Height="Auto"
-                      Margin="5,5,5,5"
+                      Margin="5,10,5,10"
                       VerticalAlignment="Top">
 
                     <Grid.ColumnDefinitions>

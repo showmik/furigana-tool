@@ -96,7 +96,7 @@ namespace FuriganaTool
             currentRowCounterText.Foreground = new SolidColorBrush(Color.FromRgb(33, 150, 243));
             currentRowCounterText.HorizontalAlignment = HorizontalAlignment.Center;
             currentRowCounterText.VerticalAlignment = VerticalAlignment.Center;
-            //currentRowCounterText.Margin = new Thickness(0, 0, 5, 0);
+            currentRowCounterText.Margin = new Thickness(0, 0, 5, 0);
 
             TextBoxGrid.Children.Add(currentRowCounterText);
         }

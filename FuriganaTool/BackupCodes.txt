@@ -24,7 +24,7 @@
                             Background="{TemplateBinding Background}"
                                     BorderThickness="2"
                                     BorderBrush="#085594">
-                                <ContentPresenter VerticalAlignment="Center"
+                                <ConstentPresenter VerticalAlignment="Center"
                                                   HorizontalAlignment="Center" />
                             </Border>
                         </ControlTemplate>

@@ -58,7 +58,7 @@ namespace FuriganaTool
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < rowCounter; i++)
+            for (int i = 0; i < kanjiTextBoxList.Count; i++)
             {
                 kanjiTextBoxList[i].Clear();
                 furiganaTextBoxList[i].Clear();

@@ -19,6 +19,9 @@ namespace FuriganaTool
         private List<TextBox> furiganaTextBoxList = new List<TextBox>();
         private List<TextBlock> rowCounterTextList = new List<TextBlock>();
         private int rowCounter;
+        private int maxRow = 20;
+        private string IncorrectInputWarningText = "Input both Kanji and Furigana!";
+        private string maxRowReachedWarningText = "Maximum(20) Field Reached!!!";
 
         public MainWindow()
         {
@@ -30,7 +33,6 @@ namespace FuriganaTool
 
         private void RunButton_Click(object sender, RoutedEventArgs e)
         {
-
             StringBuilder stringBuilder = new StringBuilder();
 
             for (int i = 0; i < kanjiTextBoxList.Count; i++)
@@ -48,10 +50,16 @@ namespace FuriganaTool
             }
             else
             {
-                ResultTextBox.Text = "Input both Kanji and Furigana!";
-                if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+                ResultTextBox.Text = IncorrectInputWarningText;
+                try
                 {
-                    SystemSounds.Exclamation.Play();
+                    if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+                    {
+                        SystemSounds.Exclamation.Play();
+                    }
+                }
+                catch
+                {
                 }
             }
         }
@@ -69,7 +77,7 @@ namespace FuriganaTool
         {
             rowCounter++;
 
-            if (rowCounter <= 20)
+            if (rowCounter <= maxRow)
             {
                 TextBoxGrid.RowDefinitions.Add(new RowDefinition());
 
@@ -79,7 +87,17 @@ namespace FuriganaTool
             }
             else
             {
-                ResultTextBox.Text = "Maximum Input Reached!!!";
+                ResultTextBox.Text = maxRowReachedWarningText;
+                try
+                {
+                    if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+                    {
+                        SystemSounds.Exclamation.Play();
+                    }
+                }
+                catch
+                {
+                }
             }
         }
 
@@ -104,23 +122,23 @@ namespace FuriganaTool
         private void AddFuriganaTextBox()
         {
             furiganaTextBoxList.Add(new TextBox());
-            Grid.SetRow(furiganaTextBoxList.Last(), rowCounter - 1);
-            Grid.SetColumn(furiganaTextBoxList.Last(), 2);
-            furiganaTextBoxList.Last().Height = 30;
-            furiganaTextBoxList.Last().Margin = new Thickness(5);
-            TextBoxGrid.Children.Add(furiganaTextBoxList.Last());
-            furiganaTextBoxList[rowCounter - 1].Name = $"TextBoxR{rowCounter - 1}C2";
+            TextBox currentFuriganaTextBox = furiganaTextBoxList.Last();
+            Grid.SetRow(currentFuriganaTextBox, rowCounter - 1);
+            Grid.SetColumn(currentFuriganaTextBox, 2);
+            currentFuriganaTextBox.Height = 30;
+            currentFuriganaTextBox.Margin = new Thickness(5);
+            TextBoxGrid.Children.Add(currentFuriganaTextBox);
         }
 
         private void AddKanjiTextBox()
         {
             kanjiTextBoxList.Add(new TextBox());
-            Grid.SetRow(kanjiTextBoxList.Last(), rowCounter - 1);
-            Grid.SetColumn(kanjiTextBoxList.Last(), 1);
-            kanjiTextBoxList.Last().Height = 30;
-            kanjiTextBoxList.Last().Margin = new Thickness(5);
-            TextBoxGrid.Children.Add(kanjiTextBoxList.Last());
-            kanjiTextBoxList[rowCounter - 1].Name = $"TextBoxR{rowCounter - 1}C1";
+            TextBox currentKanjiTextBox = kanjiTextBoxList.Last();
+            Grid.SetRow(currentKanjiTextBox, rowCounter - 1);
+            Grid.SetColumn(currentKanjiTextBox, 1);
+            currentKanjiTextBox.Height = 30;
+            currentKanjiTextBox.Margin = new Thickness(5);
+            TextBoxGrid.Children.Add(currentKanjiTextBox);
         }
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
@@ -144,6 +162,5 @@ namespace FuriganaTool
             furiganaTextBoxList.Add(TextBoxR2C2);
             furiganaTextBoxList.Add(TextBoxR3C2);
         }
-
     }
 }

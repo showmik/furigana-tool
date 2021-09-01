@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="410"
-        MinHeight="410"
+        Height="400"
+        MinHeight="400"
         Width="420"
         MinWidth="430"
         MaxWidth="430"
         ResizeMode="CanResize">
 
     <Window.Resources>
-
+        <!--#region Scrool Bar Style -->
         <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -58,11 +58,11 @@
                               Background="#E7F4FE"
                               HorizontalAlignment="Right"
                               Margin="0,5,0,5">
-                            
+
                             <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="true" Focusable="False">
                                 <Track.Thumb>
                                     <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}"
-                                               Style="{DynamicResource ScrollThumbs}" />
+                                           Style="{DynamicResource ScrollThumbs}" />
                                 </Track.Thumb>
                                 <Track.IncreaseRepeatButton>
                                     <RepeatButton x:Name="PageUp"
@@ -81,9 +81,6 @@
 
                         <ControlTemplate.Triggers>
                             <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
-                                <Setter TargetName="Thumb" Property="Background" Value="#0C7FDE" />
-                            </Trigger>
-                            <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
                                 <Setter TargetName="Thumb" Property="Background" Value="#0C7FDE" />
                             </Trigger>
 
@@ -112,9 +109,9 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <!-- =============================== TextBox Style ================================ -->
-
+        <!--#endregion-->
+        
+        <!--#region Text Box Syle -->
         <Style TargetType="{x:Type TextBox}">
             <Setter Property="SnapsToDevicePixels" Value="True" />
             <Setter Property="OverridesDefaultStyle" Value="True" />
@@ -161,9 +158,9 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-        <!-- =============================== Button Style ================================ -->
-
+<!--#endregion-->
+        
+        <!--#region Button Style -->
         <Style TargetType="{x:Type Button}">
             <Setter Property="SnapsToDevicePixels" Value="True" />
             <Setter Property="OverridesDefaultStyle" Value="True" />
@@ -201,19 +198,21 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <!--#endregion-->
     </Window.Resources>
 
-    <!-- =============================== Main Grid Contents ================================ -->
+    <!--#region Main Grid Contents -->
 
     <Grid Background="#42a5f5" Height="auto">
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
+                <RowDefinition Height="45" />
                 <RowDefinition />
                 <RowDefinition Height="135" />
             </Grid.RowDefinitions>
 
+            <!-- =========================== Label area ↓ =============================== -->
             <Grid Grid.Row="0" Height="30" Margin="25,0,25,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -237,6 +236,7 @@
                            FontSize="14" />
             </Grid>
 
+            <!-- =========================== TextBox area ↓ =============================== -->
             <ScrollViewer Grid.Row="1"
                           Background="#ffffff"
                           VerticalAlignment="Stretch">
@@ -369,6 +369,7 @@
                 </Grid>
             </ScrollViewer>
 
+            <!-- =========================== Control area ↓ =============================== -->
             <Grid x:Name="ControlsGrid"
                   Grid.Row="2"
                   Margin="25,10,20,10"
@@ -476,4 +477,5 @@
             </Grid>
         </Grid>
     </Grid>
+    <!--#endregion-->
 </Window>

@@ -17,6 +17,7 @@
         <Style TargetType="ScrollBar">
             <Setter Property="SnapsToDevicePixels" Value="True" />
             <Setter Property="OverridesDefaultStyle" Value="True" />
+            
 
             <Style.Triggers>
                 <Trigger Property="Orientation" Value="Vertical">
@@ -42,9 +43,11 @@
 
                 <!-- Border with a background -->
 
-                <Border Grid.Row="1"
+                <Border x:Name="border"
                         CornerRadius="0"
-                        Margin="10">
+                        Margin="10"
+                        BorderThickness="0">
+
                 </Border>
 
                 <!-- Repeat button - Up Arrow Button -->
@@ -54,20 +57,31 @@
                               Grid.Row="0">
                     <RepeatButton.Style>
                         <Style TargetType="RepeatButton">
-                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="Background" Value="Yellow" />
+                            <Setter Property="BorderThickness" Value="0" />
+
+                            <Style.Triggers>
+                                <Trigger Property="IsVisible" Value="False">
+                                    <Setter Property="Background" Value="Red"/>
+                                </Trigger>
+                            </Style.Triggers>
+                            
                         </Style>
+                        
                     </RepeatButton.Style>
+                    
                 </RepeatButton>
 
                 <!-- Repeat button - Down Arrow Button -->
                 <RepeatButton Focusable="False"
-                             Height="80"
-                             Command="ScrollBar.LineDownCommand"
+                              Height="80"
+                              Command="ScrollBar.LineDownCommand"
                               Grid.Row="2">
 
                     <RepeatButton.Style>
                         <Style TargetType="RepeatButton">
-                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="Background" Value="Yellow" />
+                            <Setter Property="BorderThickness" Value="0" />
                         </Style>
                     </RepeatButton.Style>
                 </RepeatButton>
@@ -76,16 +90,43 @@
                 <Track Name="PART_Track"
                        Grid.Row="1"
                        IsDirectionReversed="True">
-                    
 
                     <Track.DecreaseRepeatButton>
                         <RepeatButton Margin="0"
                                       Command="ScrollBar.PageUpCommand" />
                     </Track.DecreaseRepeatButton>
 
-                    <!-- Thumb -->
+                    <!-- ========================== Thumb ====================== -->
                     <Track.Thumb>
-                        <Thumb Background="#42a5f5">
+                        <Thumb BorderBrush="#42a5f5"
+                               BorderThickness="0">
+                            <Thumb.Style>
+                                <Style TargetType="Thumb">
+                                    <Setter Property="SnapsToDevicePixels" Value="True" />
+                                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                                    
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Border x:Name="border" 
+                                                        Background="#42a5f5"
+                                                        SnapsToDevicePixels="True">
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="border"
+                                                                Property="Background"
+                                                                Value="#085594" />
+                                                    
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Thumb.Style>
                         </Thumb>
                     </Track.Thumb>
 
@@ -96,6 +137,31 @@
                 </Track>
             </Grid>
         </ControlTemplate>
+
+        <Style TargetType="{x:Type RepeatButton}">
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="IsTabStop" Value="False" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+                        <Border Background="Green">
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                        
+                    </ControlTemplate>
+                    
+                </Setter.Value>
+                
+            </Setter>
+            
+        </Style>
 
         <!-- =============================== TextBox Style ================================ -->
 

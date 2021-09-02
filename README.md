@@ -36,6 +36,12 @@ Resul:
 
 ## Using the Furigana Tool
 
-As you can see, it can be very tedious to write code using ruby syntax every time I want to use Furigana. This tool makes it a lot easier. I just need to input Kanji and Furigana, and it will generate the code for me.
+As you can guess, it was very tedious for me to write HTML code every time I wanted to use Furigana. This tool made it a lot easier. Now I just need to input the Kanji and Furigana, and it generates the code for me.
+
+<br/>
+
+<ruby><rb>振</rb><rt>ふ</rt><rb>り</rb><rt></rt><rb>仮</rb><rt>が</rt><rb>名</rb><rt>な</rt></ruby> | <ruby><rb>第</rb><rt>たい</rt><rb>2</rb><rt></rt><rb>巻</rb><rt>かん</rt></ruby>
+------------ | -------------
+<img src="Docs/FuriganaToolInterface01.png" alt="App_Interfaxe"/> | <img src="Docs/furigana_fool_interface_02.png" alt="App_Interfaxe"/>
 
 

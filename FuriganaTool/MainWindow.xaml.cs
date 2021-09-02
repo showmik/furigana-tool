@@ -20,7 +20,7 @@ namespace FuriganaTool
         private List<TextBlock> rowCounterTextList = new List<TextBlock>();
         private int rowCounter;
         private int maxRow = 20;
-        private string IncorrectInputWarningText = "Input both Kanji and Furigana!";
+        private string IncorrectInputWarningText = "Must Enter Kanji!";
         private string maxRowReachedWarningText = "Maximum (20) Row Reached!";
 
         public MainWindow()

@@ -34,6 +34,10 @@ namespace Gem
                 {
                     NextSegment();
                 }
+                else if (characters[currentIndex] == ' ' && !_parsingBaseSection)
+                {
+                    _currentFurigana += characters[currentIndex];
+                }
                 else if (IsLastCharacterInBlock(characters, currentIndex) && _parsingBaseSection)
                 {
                     _currentBase += characters[currentIndex];
@@ -75,14 +79,14 @@ namespace Gem
 
         private bool IsKanji(char character)
         {
-            return character >= 0x4e00 && character <= 0x9faf;
+            return character is >= (char)0x4e00 and <= (char)0x9faf;
         }
 
         private ISegment GetSegment(string currentBase, string currentFurigana)
         {
-            if (string.IsNullOrEmpty(currentFurigana?.Trim()))
+            if (currentFurigana == " ")
             {
-                return new UndecoratedSegment(currentBase);
+                return new FuriganaSegment(currentBase, string.Empty);
             }
             return new FuriganaSegment(currentBase, currentFurigana);
         }

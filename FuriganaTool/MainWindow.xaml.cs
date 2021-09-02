@@ -54,7 +54,6 @@ namespace FuriganaTool
             {
                 var furigana = new Furigana(stringBuilder.ToString());
                 ResultTextBox.Text = furigana.RubySyntaxResult;
-                //ResultTextBox.Text = stringBuilder.ToString();
             }
             else
             {

@@ -37,9 +37,16 @@ namespace FuriganaTool
 
             for (int i = 0; i < kanjiTextBoxList.Count; i++)
             {
-                if (kanjiTextBoxList[i].Text != string.Empty && furiganaTextBoxList[i].Text != string.Empty)
+                if (kanjiTextBoxList[i].Text != string.Empty)
                 {
-                    stringBuilder.Append($"{kanjiTextBoxList[i].Text.Trim()}[{furiganaTextBoxList[i].Text.Trim()}]");
+                    if (furiganaTextBoxList[i].Text == string.Empty)
+                    {
+                        stringBuilder.Append($"{kanjiTextBoxList[i].Text.Trim()}[ ]");
+                    }
+                    else
+                    {
+                        stringBuilder.Append($"{kanjiTextBoxList[i].Text.Trim()}[{furiganaTextBoxList[i].Text}]");
+                    }
                 }
             }
 
@@ -47,6 +54,7 @@ namespace FuriganaTool
             {
                 var furigana = new Furigana(stringBuilder.ToString());
                 ResultTextBox.Text = furigana.RubySyntaxResult;
+                //ResultTextBox.Text = stringBuilder.ToString();
             }
             else
             {

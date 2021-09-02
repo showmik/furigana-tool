@@ -10,6 +10,7 @@
     <PackageIcon>furigana_tool_icon_512x512.png</PackageIcon>
     <PackageIconUrl />
     <ApplicationIcon>furigana_tool_icon.ico</ApplicationIcon>
+    <Description>Furigana Tool generates HTML ruby syntax code from Kanji.</Description>
 
   </PropertyGroup>
 

@@ -21,18 +21,21 @@ And the result would be this:
 
 > <ruby><rb>振</rb><rt>ふ</rt><rb>り</rb><rt></rt><rb>仮</rb><rt>が</rt><rb>名</rb><rt>な</rt></ruby>
 
+<br/>
+
 Or the word *Dai ni kan (Volume 2)*:
 
 <img src="Docs/Dai_ni_can_Furigana_Example.png" width="200" alt="DaiNiKan"/>
 
 HTML:
-
 ```
 <ruby><rb>第</rb><rt>たい</rt><rb>2</rb><rt></rt><rb>巻</rb><rt>かん</rt></ruby>
 ```
-
 Resul:
-
 > <ruby><rb>第</rb><rt>たい</rt><rb>2</rb><rt></rt><rb>巻</rb><rt>かん</rt></ruby>
+
+## Using the Furigana Tool
+
+As you can see, it can be very tedious to write code using ruby syntax every time I want to use Furigana. This tool makes it a lot easier. I just need to input Kanji and Furigana, and it will generate the code for me.
 
 

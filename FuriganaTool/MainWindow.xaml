@@ -10,7 +10,7 @@
         Width="420"
         MinWidth="430"
         MaxWidth="430"
-        ResizeMode="CanResize" >
+        ResizeMode="CanResize">
 
     <Window.Resources>
         <!--#region Scrool Bar Style -->
@@ -110,7 +110,7 @@
             </Setter>
         </Style>
         <!--#endregion-->
-        
+
         <!--#region Text Box Syle -->
         <Style TargetType="{x:Type TextBox}">
             <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -158,8 +158,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
-<!--#endregion-->
-        
+        <!--#endregion-->
+
         <!--#region Button Style -->
         <Style TargetType="{x:Type Button}">
             <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -360,7 +360,7 @@
 
                     <TextBox x:Name="TextBoxR3C2"
                              Grid.Row="3"
-                            Grid.Column="2"
+                             Grid.Column="2"
                              Height="30"
                              Margin="5,5,5,5"
                              BorderThickness="2"
@@ -416,7 +416,8 @@
                          Grid.Column="0"
                          Grid.ColumnSpan="2"
                          Height="30"
-                         Margin="10,5,10,10">
+                         Margin="10,5,10,10"
+                         Padding="3,0,0,0">
 
                     <TextBox.Style>
 

@@ -21,7 +21,7 @@ namespace FuriganaTool
         private int rowCounter;
         private int maxRow = 20;
         private string IncorrectInputWarningText = "Input both Kanji and Furigana!";
-        private string maxRowReachedWarningText = "Maximum(20) Field Reached!!!";
+        private string maxRowReachedWarningText = "Maximum(20) Row Reached!";
 
         public MainWindow()
         {

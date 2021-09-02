@@ -11,6 +11,7 @@
     <PackageIconUrl />
     <ApplicationIcon>furigana_tool_icon.ico</ApplicationIcon>
     <Description>Furigana Tool generates HTML ruby syntax code from Kanji.</Description>
+    <PackageId>Furigana Tool</PackageId>
 
   </PropertyGroup>
 

@@ -41,8 +41,6 @@ As you can guess, it was very tedious for me to write HTML code every time I wan
 
 <br/>
 
-<ruby><rb>振</rb><rt>ふ</rt><rb>り</rb><rt></rt><rb>仮</rb><rt>が</rt><rb>名</rb><rt>な</rt></ruby> | <ruby><rb>第</rb><rt>たい</rt><rb>2</rb><rt></rt><rb>巻</rb><rt>かん</rt></ruby>
------------- | -------------
-<img src="Docs/FuriganaToolInterface01.png" alt="App_Interfaxe"/> | <img src="Docs/furigana_fool_interface_02.png" alt="App_Interfaxe"/>
+<img src="Docs/FuriganaToolInterface01.png" alt="App_Interfaxe" align="top"/> <img src="Docs/furigana_fool_interface_02.png" alt="App_Interfaxe" align="top"/>
 
 

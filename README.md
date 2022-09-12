@@ -2,13 +2,13 @@
 
 **Furigana Tool** automates the process of writing HTML code for Furigana with *[ruby](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby)* syntax. It uses a modified version of the **[Gem](https://github.com/helephant/Gem)** library and adds a User Interface to it.
 
-This tool was intended to be used along with the **[HTML Table Generator](https://github.com/showmik/html-table-generator)** for one of my projects.
+This tool was designed to work in conjunction with the **[HTML Table Generator](https://github.com/showmik/html-table-generator)** which I created for another project.
 
 ## The Ruby Syntax
 
 > "A ruby annotation is a small extra text, attached to the main text to indicate the pronunciation or meaning of the corresponding characters. This kind of annotation is often used in Japanese publications." — W3Schools
 
-For example, let's consider the word *Furigana*:
+Consider the word *Furigana* as an example:
 
 <img src="Docs/Fu_ri_ga_na_Furigana_Example.png" width="200" alt="Furigana"/>
 
@@ -37,7 +37,7 @@ Resul:
 
 ## Using the Furigana Tool
 
-As you can guess, it was very tedious for me to write HTML code every time I wanted to use Furigana. This tool made it a lot easier. Now I just need to input the Kanji and Furigana, and it generates the code for me.
+As you can guess, writing HTML code every time I wanted to use Furigana was a headache for me. This tool made it a lot easier. Now I just need to enter the Kanji and Furigana, and it will generate the code for me.
 
 <br/>
 
